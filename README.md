@@ -3,9 +3,11 @@
 ## Guía de instalación 
 1. Instalar dependencias 
 `pip install -r docm_cca/dependencies.txt`
-2. Instalar driver de Mozzilla. 
-Se encuentra en `https://github.com/mozilla/geckodriver/releases/tag/v0.35.0`. 
+2. Instalar driver de Chrome/Mozzilla. 
+- Mozilla: Se encuentra en `https://github.com/mozilla/geckodriver/releases/tag/v0.35.0`. 
 Seleccionar la versión para windows con arquitectura de 64 bits: geckdriver-vX.XX.X-win64.zip
+- Chrome: Se encuentra en `https://googlechromelabs.github.io/chrome-for-testing/`
+Elegimos la última versión estable. Debe coincidir con la versión de chrome instalada. Para comprobar la versión de chrome instalada: **Menú configuración -> ayuda -> Información de Google Chrome**
 3. Obtención de una clave de API para Gemini Google
 Se puede encontrar en el siguiente enlace. https://ai.google.dev/gemini-api/docs/api-key?hl=es-419
 4. Añadir clave API como variable de entorno 
