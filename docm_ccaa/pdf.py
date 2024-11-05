@@ -5,8 +5,10 @@ from PyPDF2 import PdfReader
 # Clase que se utiliza para acceder a los pdfs online y leerlos. 
 
 class Pdf:
-    def __init__(self, ruta):
+    def __init__(self, ruta, fecha, sumario):
         self.ruta = ruta
+        self.fecha = fecha
+        self.sumario = sumario
     
     def leer(self):
         respuesta = requests.get(self.ruta)
