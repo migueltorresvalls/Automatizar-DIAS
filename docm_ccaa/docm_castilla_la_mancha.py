@@ -15,7 +15,7 @@ import time
 
 if __name__ == "__main__":
     # Cargo declaraciones antiguas
-    excel = Excel("docm_ccaa/documentos.xlsx")
+    excel = Excel("docm_ccaa/documentos.xlsx", "docm_ccaa/Responsables municipios.xlsx")
     declaraciones = excel.leer_declaraciones()
     declaraciones_nuevas = []
 
@@ -40,7 +40,6 @@ if __name__ == "__main__":
     # Compruebo si se trata de una resolucion nueva
     for i in pdfs: 
         resp = gemini.lanzar_consulta(i.leer())
-        # print(f"===Nueva resolución encontrada===\n{resp}")
 
         # Parseo respuesta de la IA en un objeto declaracion
         respuesta = Respuesta(i.fecha, i.sumario, i.ruta, resp)
